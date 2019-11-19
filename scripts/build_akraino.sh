@@ -84,6 +84,7 @@ cd ${SRC_EXTRA_DIR}
 for i in "git clone http://stash.wrs.com/scm/~jhuang0/meta-akraino.git" \
          "git clone --branch thud git://github.com/rauc/meta-rauc.git" \
          "git clone --branch thud git://git.yoctoproject.org/meta-security" \
+         "git clone --branch thud https://github.com/intel-iot-devkit/meta-iot-cloud.git" \
          "git clone --branch WRLINUX_10_18_BASE_akraino http://stash.wrs.com/scm/~jhuang0/meta-starlingx.git" \
          "git clone --branch WRLINUX_10_18_BASE_akraino git://github.com/jackiehjm/meta-cloud-services.git"; do
     RUN_CMD="${i}"
@@ -103,7 +104,6 @@ bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-akraino
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-starlingx
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-rauc
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-security
-bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-security/meta-tpm
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-security/meta-security-compliance
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-cloud-services
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-cloud-services/meta-openstack
