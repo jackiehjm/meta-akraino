@@ -84,7 +84,8 @@ cd ${SRC_EXTRA_DIR}
 for i in "git clone https://github.com/Wind-River/meta-akraino.git" \
          "git clone --branch thud git://github.com/rauc/meta-rauc.git" \
          "git clone --branch thud git://git.yoctoproject.org/meta-security" \
-         "git clone --branch WRLINUX_10_18_BASE_akraino https://github.com/jackiehjm/meta-starlingX.git" \
+         "git clone --branch thud https://github.com/intel-iot-devkit/meta-iot-cloud.git" \
+         "git clone --branch master http://bitbucket.wrs.com/scm/ipg-review/meta-stak-common.git" \
          "git clone --branch WRLINUX_10_18_BASE_akraino git://github.com/jackiehjm/meta-cloud-services.git"; do
     RUN_CMD="${i}"
     echo_cmd "Cloing with:"
@@ -100,10 +101,9 @@ set ${PRJ_BUILD_DIR}
 # Add the meta-akraino layer and required layers
 cd ${PRJ_BUILD_DIR}
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-akraino
-bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-starlingX
+bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-stak-common
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-rauc
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-security
-bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-security/meta-tpm
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-security/meta-security-compliance
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-cloud-services
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-cloud-services/meta-openstack
