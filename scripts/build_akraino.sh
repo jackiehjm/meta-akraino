@@ -81,11 +81,11 @@ ${RUN_CMD}
 echo_info "Cloning extra layers:"
 
 cd ${SRC_EXTRA_DIR}
-for i in "git clone http://stash.wrs.com/scm/~jhuang0/meta-akraino.git" \
+for i in "git clone --branch jhuang0/wrl1018_akraino_zbsarashki_thud_stak_common_191120 http://stash.wrs.com/scm/~jhuang0/meta-akraino.git" \
          "git clone --branch thud git://github.com/rauc/meta-rauc.git" \
          "git clone --branch thud git://git.yoctoproject.org/meta-security" \
          "git clone --branch thud https://github.com/intel-iot-devkit/meta-iot-cloud.git" \
-         "git clone --branch WRLINUX_10_18_BASE_akraino http://stash.wrs.com/scm/~jhuang0/meta-starlingx.git" \
+         "git clone --branch zbsarashki/thud_stak_common http://stash.wrs.com/scm/~jhuang0/meta-starlingx.git" \
          "git clone --branch WRLINUX_10_18_BASE_akraino git://github.com/jackiehjm/meta-cloud-services.git"; do
     RUN_CMD="${i}"
     echo_cmd "Cloing with:"
