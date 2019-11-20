@@ -92,6 +92,7 @@ RDEPENDS_packagegroup-stak-base += " \
 
 RDEPENDS_packagegroup-stak-base_remove = " \
     kubernetes \
+    libtpms \
 "
 
 RDEPENDS_packagegroup-stak-perl += " \
