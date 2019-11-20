@@ -105,6 +105,7 @@ bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-stak-common
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-rauc
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-security
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-security/meta-security-compliance
+bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-iot-cloud
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-cloud-services
 bitbake-layers add-layer ${SRC_EXTRA_DIR}/meta-cloud-services/meta-openstack
 
