@@ -81,7 +81,7 @@ ${RUN_CMD}
 echo_info "Cloning extra layers:"
 
 cd ${SRC_EXTRA_DIR}
-for i in "git clone https://github.com/Wind-River/meta-akraino.git" \
+for i in "git clone --branch jhuang0/wrl1018_akraino_stak_common_20200220 http://stash.wrs.com/scm/~jhuang0/meta-akraino.git" \
          "git clone --branch thud git://github.com/rauc/meta-rauc.git" \
          "git clone --branch thud git://git.yoctoproject.org/meta-security" \
          "git clone --branch thud https://github.com/intel-iot-devkit/meta-iot-cloud.git" \
