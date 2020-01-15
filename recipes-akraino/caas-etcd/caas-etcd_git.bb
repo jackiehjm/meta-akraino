@@ -20,7 +20,7 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=2ee41112a44fe7014dce33e26468ba93"
 
 PROTOCOL = "https"
-SRCREV = "26fbfdd8d2c6c526620cc848a22483035270965a"
+SRCREV = "e131842648210ce33c4edbd00f131507edbb07a2"
 
 SRC_URI = "git://gerrit.akraino.org/r/ta/caas-etcd;protocol=${PROTOCOL};rev=${SRCREV}"
 
@@ -28,8 +28,8 @@ S = "${WORKDIR}/git"
 
 inherit docker-build
 
-MAJOR_VERSION = "3.3.13"
-MINOR_VERSION = "5"
+MAJOR_VERSION = "3.4.0"
+MINOR_VERSION = "0"
 
 PV = "${MAJOR_VERSION}-${MINOR_VERSION}"
 
