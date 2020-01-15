@@ -24,7 +24,7 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=c8c61a9e78acc1e713ef4c6c14e14e54"
 
 PROTOCOL = "https"
-SRCREV = "d2abe03fa20cf88bd524dc030ddb25e72bca2f2b"
+SRCREV = "787a10094712cd6ebd884dbac072302a75aacf31"
 
 SRC_URI = "git://gerrit.akraino.org/r/ta/caas-cpupooler;protocol=${PROTOCOL};rev=${SRCREV}"
 
@@ -33,8 +33,8 @@ S = "${WORKDIR}/git"
 inherit docker-build
 
 MAJOR_VERSION = "0.3.0"
-MINOR_VERSION = "1"
-CPUPOOLER_VERSION = "2467d8805f309c4294a0e63af70038a7d1372391"
+MINOR_VERSION = "5"
+CPUPOOLER_VERSION = "603d1128aa982493d50d682b2edb37fe17b73031"
 DEPENDENCY_MANAGER_VERSION = "0.5.0"
 PROCESS_STARTER_INSTALL_PATH = "/opt/bin/"
 
