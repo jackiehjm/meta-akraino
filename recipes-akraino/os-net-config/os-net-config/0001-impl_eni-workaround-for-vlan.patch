@@ -1,0 +1,26 @@
+From fc53bfd9a1372477d091ff36de8399c581dd97e9 Mon Sep 17 00:00:00 2001
+From: Jackie Huang <jackie.huang@windriver.com>
+Date: Mon, 20 Jan 2020 07:23:39 +0800
+Subject: [PATCH] impl_eni: workaround for vlan
+
+Signed-off-by: Jackie Huang <jackie.huang@windriver.com>
+---
+ os_net_config/impl_eni.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/os_net_config/impl_eni.py b/os_net_config/impl_eni.py
+index 944c4e9..1bac1ae 100644
+--- a/os_net_config/impl_eni.py
++++ b/os_net_config/impl_eni.py
+@@ -126,6 +126,8 @@ class ENINetConfig(os_net_config.NetConfig):
+             data += _iface
+             data += address_data
+             data += "    vlan-raw-device %s\n" % interface.device
++            data += ("    pre-up ip link add link %s name vlan%i type vlan id %i\n" %
++                     (interface.device, interface.vlan_id, interface.vlan_id))
+         else:
+             if isinstance(interface, objects.Interface) and interface.hotplug:
+                 data += "allow-hotplug %s\n" % interface.name
+-- 
+2.7.4
+
