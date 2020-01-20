@@ -55,5 +55,6 @@ RDEPENDS_${PN} += " \
         python-jsonschema \
         dhcp-client \
         driverctl \
+        vlan \
         "
 
